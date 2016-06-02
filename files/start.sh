@@ -17,7 +17,8 @@ com.cloudera.cmf.db.password=${DB_PASSWORD}
 EOF
 
 ## Default env
-source /etc/default/cloudera-scm-server
+export CMF_JDBC_DRIVER_JAR=${CMF_JDBC_DRIVER_JAR:-/usr/share/java/mysql-connector-java.jar:/usr/share/java/oracle-connector-java.jar}
+export CMF_JAVA_OPTS=${CMF_JAVA_OPTS:--Xmx2G -XX:MaxPermSize=256m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp -Dcmf.root.logger=INFO,LOGFILE,CONSOLE}
 
 ## Log config and env for troubleshooting
 cat 1>&2 << EOF
@@ -30,4 +31,4 @@ $(env)
 /usr/sbin/cmf-server:
 EOF
 
-exec /usr/sbin/cmf-server
+exec /usr/sbin/cmf-server $*
