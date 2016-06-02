@@ -6,7 +6,7 @@ COPY files/etc/yum.repos.d/cloudera-manager.repo /etc/yum.repos.d/cloudera-manag
 RUN \
   rpm --rebuilddb && \
   yum install -y \
-    cloudera-manager-server
+    cloudera-manager-server \
     ntp && \
   yum clean all
 
