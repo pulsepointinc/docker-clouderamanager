@@ -7,7 +7,7 @@ RUN \
   rpm --rebuilddb && \
   yum install -y \
     cloudera-manager-server \
-    ntp & \
+    ntp && \
   yum clean all
 
 # Add MySQL JDBC driver
