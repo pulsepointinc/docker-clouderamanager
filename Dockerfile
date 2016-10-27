@@ -19,7 +19,7 @@ RUN \
 # Add Kudu Custom Service Descriptor
 RUN \
   mkdir -p -v /opt/cloudera/csd && \
-  curl -s -L -o /opt/cloudera/csd/judu.jar \
+  curl -s -L -o /opt/cloudera/csd/kudu.jar \
     http://archive.cloudera.com/beta/kudu/csd/KUDU-1.0.1.jar
 
 # Add start script
