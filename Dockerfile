@@ -3,7 +3,7 @@ FROM pulsepointinc/centos6-java8:latest
 # Install CM server
 # Note the repo here should be pinned to specific release version
 COPY files/etc/yum.repos.d/cloudera-manager.repo /etc/yum.repos.d/cloudera-manager.repo
-RUN yum install -y cloudera-manager-server
+RUN yum install -y cloudera-manager-server openldap-clients krb5-workstation krb5-libs
 
 # Add MySQL JDBC driver
 RUN \
