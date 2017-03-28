@@ -1,5 +1,5 @@
 [cloudera-manager]
 name=Cloudera Manager, Version 5
-baseurl=http://archive.cloudera.com/cm5/redhat/6/x86_64/cm/5.9.0
+baseurl=http://archive.cloudera.com/cm5/redhat/6/x86_64/cm/5.10.0
 gpgkey=http://archive.cloudera.com/redhat/cdh/RPM-GPG-KEY-cloudera
 gpgcheck=1
