@@ -1,4 +1,4 @@
-FROM pulsepointinc/centos6-java8:latest
+FROM pulsepointinc/docker-centos7.5-java8
 
 # Install CM server
 # Note the repo here should be pinned to specific release version
@@ -14,7 +14,7 @@ RUN \
 RUN \
   mkdir -p -v /usr/share/java && \
   curl -s -L -o /usr/share/java/mysql-connector-java.jar \
-    http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar
+    "http://central.maven.org/maven2/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar"
 
 # Add start script
 COPY /files/start.sh /
