@@ -1,6 +1,6 @@
 FROM pulsepointinc/docker-centos7.5-java8
 
-# Install CM server
+# Install CM server 5.13
 # Note the repo here should be pinned to specific release version
 COPY files/etc/yum.repos.d/cloudera-manager.repo /etc/yum.repos.d/cloudera-manager.repo
 RUN \
